@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 100vh;
+  background-color: #cfcfff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input:focus {
+  outline: none;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1350px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.content .about .text, .content .home .box .text {
+  font-size: 2vw;
+  color: #7d7272;
+  font-weight: 600;
+  line-height: 2;
+  padding: 20px;
+  background-color: #EDE8E8;
+  border-radius: 35px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #009688;
+  border-radius: 35px;
+}
+
+header {
+  padding: 20px;
+  width: 100%;
+}
+header > .container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+header > .container .logoName {
+  color: #009688;
+}
+header > .container ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: #EDE8E8;
+  border-radius: 35px;
+  padding: 5px;
+  font-size: 14;
+}
+@media (max-width: 576px) {
+  header > .container ul {
+    font-size: 10px;
+  }
+}
+header > .container ul li {
+  padding: 3px 15px;
+  font-weight: 600;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header > .container ul .active {
+  background-color: white;
+}
+header > .container button {
+  border: none;
+  background-color: #EDE8E8;
+  padding: 5px 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+}
+.content .home .box {
+  display: flex;
+  justify-content: space-between;
+}
+.content .home .box .image {
+  width: 20%;
+}
+.content .home .box .image img {
+  width: 100%;
+}
+.content .home .box .text {
+  width: 60%;
+}
+.content .home .box .text strong {
+  color: #009688;
+}
+.content .home .box .image {
+  width: 20%;
+}
+.content .home .box .image img {
+  width: 100%;
+}
+.content .home .socials {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 50px;
+}
+.content .home .socials a {
+  color: #009688;
+  transition: 0.3s all !important;
+}
+.content .home .socials a:hover {
+  color: rgba(0, 150, 135, 0.5098039216);
+}
+.content .about {
+  display: none;
+  width: 100%;
+}
+.content .about .image {
+  width: 20%;
+  margin: auto;
+}
+.content .about .image img {
+  width: 100%;
+}
+.content .about .text {
+  width: 100%;
+  margin: auto;
+}
+.content .project {
+  display: none;
+}
+.content .project .image {
+  width: 100px;
+  margin: auto;
+}
+.content .project .image img {
+  width: 100%;
+}
+.content .project .text-box {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  background-color: #EDE8E8;
+  padding: 20px;
+  border-radius: 35px;
+}
+.content .project .text-box input {
+  flex-basis: 80%;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+}
+.content .project .text-box button {
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  background-color: #009688;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.content .project .text-box button:hover {
+  background-color: rgba(0, 150, 135, 0.5098039216);
+}
+.content .project .key-words {
+  width: 60%;
+  margin: 20px auto;
+  font-size: 10px;
+  font-weight: 600;
+  color: #7d7272;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.content .project .key-words span {
+  background-color: #fff;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 6px;
+}
+.content .project .key-words h4 {
+  display: inline;
+}
+.content .project .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 35px;
+  text-align: center;
+}
+.content .project .cards .repos {
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  background-color: #EDE8E8;
+  padding: 20px;
+  border-radius: 35px;
+}
+.content .project .cards .repos .icon {
+  width: 100px;
+  margin: auto;
+  color: #009688;
+  text-align: center;
+  padding: 20px;
+}
+.content .project .cards .repos .icon i {
+  font-size: 50px;
+}
+.content .project .cards .repos .repo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.content .project .cards .repos .repo span.name {
+  font-weight: 600;
+  color: #7d7272;
+}
+.content .project .cards .repos .repo .buttons {
+  display: flex;
+  gap: 20px;
+}
+.content .project .cards .repos .repo .buttons button {
+  border: none;
+  border-radius: 6px;
+  background-color: #009688;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.content .project .cards .repos .repo .buttons button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.content .project .cards .repos .repo .buttons button:hover {
+  background-color: rgba(0, 150, 135, 0.5098039216);
+}
+.content .project .cards p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #7d7272;
+}
+.content .tools {
+  text-align: center;
+  display: none;
+}
+.content .tools h1 {
+  color: #009688;
+}
+.content .tools .skills {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.content .tools .skills .skill {
+  flex-basis: 40%;
+  background-color: #f0f0f0;
+  border-radius: 35px;
+  padding: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.content .tools .skills .skill img {
+  width: 100px;
+}
+.content .tools .skills .skill h3 {
+  color: #009688;
+  padding: 20px;
+}
+.content .tools .skills .skill p {
+  color: #7d7272;
+}
+.content .tools .skills .skill:hover {
+  background-color: #EDE8E8;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,384 @@
+// Import Mixins
+@use "./mixins/media-query" as *;
+// Import Variables
+@use "./mixins/variables" as *;
+// Import Global Mixins
+@use "./mixins/Global-mixins" as *;
+
+// Start Global Rules
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 100vh;
+  background-color: $backgroundColor;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input:focus {
+  outline: none;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @include breakPoints(mobile) {
+    width: 90%;
+  }
+  @include breakPoints(medium) {
+    width: 750px;
+  }
+  @include breakPoints(large) {
+    width: 970px;
+  }
+  @include breakPoints(x-large) {
+    width: 1170px;
+  }
+  @include breakPoints(xx-large) {
+    width: 1350px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+%text {
+  font-size: 2vw;
+  color: #7d7272;
+  font-weight: 600;
+  line-height: 2;
+  padding: 20px;
+  background-color: $backColor2;
+  border-radius: 35px;
+}
+
+// /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+// /* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+// /* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primaryColor;
+  border-radius: 35px;
+}
+
+
+
+// End Global Rules
+
+// Start Header
+header {
+  padding: 20px;
+  width: 100%;
+  > .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .logoName {
+      color: $primaryColor;
+    }
+    // Second Child
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background-color: $backColor2;
+      border-radius: 35px;
+      padding: 5px;
+      font-size: 14;
+      @include breakPoints(mobile) {
+        font-size: 10px;
+      }
+      li {
+        padding: 3px 15px;
+        font-weight: 600;
+        border-radius: 35px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .active {
+        background-color: white;
+      }
+    }
+
+    // Third Child
+    button {
+      border: none;
+      background-color: $backColor2;
+      padding: 5px 10px;
+      height: fit-content;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+}
+// End Header
+
+// Start Content
+.content {
+  padding: 20px;
+  // Start Home
+  .home {
+    .box {
+      display: flex;
+      justify-content: space-between;
+      .image {
+        width: 20%;
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        @extend %text;
+        width: 60%;
+
+        strong {
+          color: $primaryColor;
+        }
+      }
+      .image {
+        width: 20%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .socials {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 80px;
+      font-size: 50px;
+      a {
+        color: $primaryColor;
+        transition: 0.3s all !important;
+        &:hover {
+          color: $alt-primaryColor;
+        }
+      }
+    }
+  }
+  // End Home
+
+  // Start About
+  .about {
+    display: none;
+    width: 100%;
+    .image {
+      width: 20%;
+      margin: auto;
+      img {
+        width: 100%;
+      }
+    }
+    .text {
+      @extend %text;
+      width: 100%;
+      margin: auto;
+    }
+  }
+  // End About
+
+  // Start Project
+  .project {
+    display: none;
+    .image {
+      width: 100px;
+      margin: auto;
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-box {
+      width: 60%;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      gap: 10px;
+      background-color: $backColor2;
+      padding: 20px;
+      border-radius: 35px;
+      input {
+        flex-basis: 80%;
+        padding: 15px;
+        border: none;
+        border-radius: 6px;
+      }
+      button {
+        flex: 1;
+        border: none;
+        border-radius: 6px;
+        background-color: $primaryColor;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background-color: $alt-primaryColor;
+        }
+      }
+    }
+
+    .key-words {
+      width: 60%;
+      margin: 20px auto;
+      font-size: 10px;
+      font-weight: 600;
+      color: #7d7272;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      span {
+        background-color: #fff;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 6px;
+      }
+      h4 {
+        display: inline;
+      }
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      // background-color: #c2cff6;
+      padding: 20px;
+      border-radius: 35px;
+      text-align: center;
+      .repos {
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        background-color: $backColor2;
+        padding: 20px;
+        border-radius: 35px;
+        .icon {
+          width: 100px;
+          margin: auto;
+          color: $primaryColor;
+          text-align: center;
+          padding: 20px;
+          i {
+            font-size: 50px;
+          }
+        }
+        .repo {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          span.name {
+            font-weight: 600;
+            color: #7d7272;
+          }
+          .buttons {
+            display: flex;
+            gap: 20px;
+            button {
+              border: none;
+              border-radius: 6px;
+              background-color: $primaryColor;
+              padding: 5px;
+              a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+              }
+              cursor: pointer;
+              transition: 0.3s;
+              &:hover {
+                background-color: $alt-primaryColor;
+              }
+            }
+          }
+        }
+      }
+      p {
+        font-size: 15px;
+        font-weight: 600;
+        color: #7d7272;
+      }
+    }
+  }
+  // End About
+  // Start Tools
+  .tools {
+    text-align: center;
+    display: none;
+    h1 {
+      color: $primaryColor;
+    }
+    .skills {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      .skill {
+        flex-basis: 40%;
+        background-color: #f0f0f0;
+        border-radius: 35px;
+        padding: 20px;
+        transition: 0.3s;
+        cursor: pointer;
+        img {
+          width: 100px;
+        }
+        h3 {
+          color: $primaryColor;
+          padding: 20px;
+        }
+        p {
+          color: #7d7272;
+        }
+        &:hover {
+          background-color: $backColor2;
+        }
+      }
+    }
+  }
+  // End Tools
+  // End Content
+}
