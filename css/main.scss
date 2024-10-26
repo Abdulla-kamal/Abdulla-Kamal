@@ -31,9 +31,9 @@ input:focus {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  @include breakPoints(mobile) {
-    width: 90%;
-  }
+  // @include breakPoints(mobile) {
+  //   width: 90%;
+  // }
   @include breakPoints(medium) {
     width: 750px;
   }
@@ -46,6 +46,7 @@ input:focus {
   @include breakPoints(xx-large) {
     width: 1350px;
   }
+  position: relative;
 }
 
 ul {
@@ -63,7 +64,7 @@ h6 {
 }
 
 %text {
-  font-size: 2vw;
+  font-size: 20px;
   color: #7d7272;
   font-weight: 600;
   line-height: 2;
@@ -95,7 +96,7 @@ h6 {
 // Start Header
 header {
   padding: 20px;
-  width: 100%;
+  // width: 100%;
   > .container {
     display: flex;
     width: 100%;

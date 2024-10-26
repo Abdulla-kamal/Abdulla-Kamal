@@ -1,0 +1,15 @@
+@media(max-width: 768px) {
+    header .logoName {
+        display: none;
+    }
+    header button {
+        display: none;
+    }
+    header .container {
+        justify-content: center;
+    }
+    .home .box {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
