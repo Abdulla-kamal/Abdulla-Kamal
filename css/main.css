@@ -160,18 +160,21 @@ header > .container button {
   margin-top: 80px;
   margin-bottom: 20px;
 }
-.content .home .socials {
+.content .home .acounts {
   width: 100%;
+  padding: 15px;
+}
+.content .home .acounts .socials {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 30px;
 }
-.content .home .socials a {
+.content .home .acounts .socials a {
   color: #009688;
   transition: 0.3s all !important;
 }
-.content .home .socials a:hover {
+.content .home .acounts .socials a:hover {
   color: rgba(0, 150, 135, 0.5098039216);
 }
 .content .about {
