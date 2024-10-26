@@ -155,12 +155,16 @@ header > .container button {
 .content .home .box .image img {
   width: 100%;
 }
+.content .home h2 {
+  color: #009688;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
 .content .home .socials {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 80px;
   font-size: 30px;
 }
 .content .home .socials a {
