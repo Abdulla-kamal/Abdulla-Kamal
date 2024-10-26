@@ -14,7 +14,6 @@
 body {
   padding: 0;
   margin: 0;
-  min-width: 100vh;
   background-color: $backgroundColor;
 }
 
@@ -46,7 +45,7 @@ input:focus {
   @include breakPoints(xx-large) {
     width: 1350px;
   }
-  position: relative;
+  // position: relative;
 }
 
 ul {
@@ -96,7 +95,7 @@ h6 {
 // Start Header
 header {
   padding: 20px;
-  // width: 100%;
+  width: 100%;
   > .container {
     display: flex;
     width: 100%;
@@ -114,9 +113,8 @@ header {
       background-color: $backColor2;
       border-radius: 35px;
       padding: 5px;
-      font-size: 14;
       @include breakPoints(mobile) {
-        font-size: 18px;
+        font-size: 14px;
       }
       li {
         padding: 3px 15px;
@@ -124,9 +122,10 @@ header {
         border-radius: 35px;
         cursor: pointer;
         transition: 0.3s;
+        opacity: .4;
       }
       .active {
-        background-color: white;
+        opacity: 1;
       }
     }
 
@@ -145,7 +144,6 @@ header {
 
 // Start Content
 .content {
-  padding: 20px;
   // Start Home
   .home {
     .box {
