@@ -25,6 +25,11 @@ input:focus {
   margin-left: auto;
   position: relative;
 }
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -106,7 +111,7 @@ header > .container ul {
 }
 @media (max-width: 576px) {
   header > .container ul {
-    font-size: 10px;
+    font-size: 18px;
   }
 }
 header > .container ul li {
@@ -160,7 +165,7 @@ header > .container button {
   justify-content: space-around;
   align-items: center;
   margin-top: 80px;
-  font-size: 50px;
+  font-size: 30px;
 }
 .content .home .socials a {
   color: #009688;

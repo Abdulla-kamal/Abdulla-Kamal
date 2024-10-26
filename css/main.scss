@@ -31,9 +31,9 @@ input:focus {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  // @include breakPoints(mobile) {
-  //   width: 90%;
-  // }
+  @include breakPoints(mobile) {
+    width: 100%;
+  }
   @include breakPoints(medium) {
     width: 750px;
   }
@@ -116,7 +116,7 @@ header {
       padding: 5px;
       font-size: 14;
       @include breakPoints(mobile) {
-        font-size: 10px;
+        font-size: 18px;
       }
       li {
         padding: 3px 15px;
@@ -179,7 +179,7 @@ header {
       justify-content: space-around;
       align-items: center;
       margin-top: 80px;
-      font-size: 50px;
+      font-size: 30px;
       a {
         color: $primaryColor;
         transition: 0.3s all !important;
