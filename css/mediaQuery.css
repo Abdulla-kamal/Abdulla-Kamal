@@ -2,10 +2,9 @@
   header .logoName {
     display: none;
   }
-  header button {
-    display: none;
-  }
+
   header .container {
+    flex-direction: column-reverse;
     justify-content: center;
   }
   .home .box {

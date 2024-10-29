@@ -104,6 +104,21 @@ try {
   console.log(exception);
 }
 
+
+
+
+// Downloading Resume 
+document.getElementById('downloadButton').addEventListener('click', function() {
+  // Specify the URL of the existing PDF file
+  const pdfUrl = '../files/AbdullaKamalResume.pdf'; // Replace with the actual path to your PDF file
+  const a = document.createElement('a');
+  a.href = pdfUrl;
+  a.download = 'AbdullaKamalResume.pdf'; // Optional: specify the name for the downloaded file
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+});
+
 // let repos = document.createElement("div");
 // repos.classList.add(
 //   "repos",
