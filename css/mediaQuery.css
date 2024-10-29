@@ -7,6 +7,11 @@
     flex-direction: column-reverse;
     justify-content: center;
   }
+  header .container button {
+   display: none;
+  }
+
+
   .home .box {
     flex-direction: column-reverse;
     align-items: center;

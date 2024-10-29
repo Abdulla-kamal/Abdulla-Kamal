@@ -48,6 +48,15 @@ input:focus {
   // position: relative;
 }
 
+button {
+  border: none;
+  background-color: $backColor2;
+  padding: 5px 10px;
+  height: fit-content;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -127,15 +136,8 @@ header {
       }
     }
 
-    // Third Child
-    button {
-      border: none;
-      background-color: $backColor2;
-      padding: 5px 10px;
-      height: fit-content;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+    
+   
   }
   a {
     text-decoration: none;
@@ -169,6 +171,13 @@ header {
       }
       .image {
         width: 20%;
+        button {
+          display: none;
+          @include breakPoints(mobile){
+            display: block;
+            font-size: 12px;
+          }
+        }
         img {
           width: 100%;
         }

@@ -49,6 +49,16 @@ input:focus {
   }
 }
 
+button {
+  border: none;
+  background-color: #EDE8E8;
+  padding: 5px 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -123,15 +133,6 @@ header > .container ul li {
 header > .container ul .active {
   opacity: 1;
 }
-header > .container button {
-  border: none;
-  background-color: #EDE8E8;
-  padding: 5px 10px;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-radius: 6px;
-  cursor: pointer;
-}
 header a {
   text-decoration: none;
   color: #000;
@@ -156,6 +157,15 @@ header a {
 }
 .content .home .box .image {
   width: 20%;
+}
+.content .home .box .image button {
+  display: none;
+}
+@media (max-width: 576px) {
+  .content .home .box .image button {
+    display: block;
+    font-size: 12px;
+  }
 }
 .content .home .box .image img {
   width: 100%;
