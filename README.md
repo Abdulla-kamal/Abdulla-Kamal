@@ -1,8 +1,8 @@
-<video src="./Videos/vid.mp4" autoplay loop muted controls>
-  Your browser does not support the video tag.
-</video>
+### Video Example
 
-Click the thumbnail above to watch the video!
+[![Video Thumbnail](https://via.placeholder.com/150)](./Videos/vid.mp4)
+
+
 
 ## 🌐 Socials:
 
