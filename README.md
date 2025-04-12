@@ -1,6 +1,4 @@
-![Image Description](./imgs/image.png)
-
-
+[![Image Description](./imgs/image.png)](https://next-js-portfolio-pi-gold.vercel.app/)
 
 ## 🌐 Socials:
 
