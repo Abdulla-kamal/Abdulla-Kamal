@@ -1,6 +1,4 @@
-### Video Example
-
-[![Video Thumbnail](https://via.placeholder.com/150)](./Videos/vid.mp4)
+![Image Description](./imgs/image.png)
 
 
 
